@@ -1,0 +1,203 @@
+#container{
+    display: grid;
+    flex-direction: column;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: "h"
+                         "."
+                         "."
+                        ".";
+}
+
+#header{
+  
+    background-image: url("https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    grid-area: h;
+    justify-self: center;
+}
+
+.overlay {
+    display: grid;
+    background-color: black;
+    align-content: center;
+    justify-content: center;
+
+    opacity: 0.4;    
+} */
+
+
+
+
+
+
+
+
+
+
+
+.title{
+    font-family: 'Rubik', sans-serif;
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+    color: lightblue;
+     font-size: 5vh;
+
+}
+
+#title2{
+   position: absolute;
+    top: 10vh;
+    right: 20vh;
+}
+
+.header-text{
+
+    font-family: 'Rubik', sans-serif;
+ 
+    color: lightblue;
+    font-weight: lighter;
+    font-size: 3vh;
+
+
+}
+
+#header-description{
+  
+}
+
+#header-description1{
+
+}
+
+#header-description2{
+
+}
+
+#header-description3{
+ 
+     grid-area: b;
+     font-weight: bolder;
+     align-self: center;
+     
+      
+}
+
+.button{
+    font-family: 'Rubik', sans-serif;
+    display: grid;
+   
+    height: 5vh;
+    width: 5vw;
+    background-color: rgb(125, 159, 165);
+    font-weight: bolder;
+    justify-content: center;
+    align-content: center;
+    border-radius: 3px;
+    
+    
+}
+
+.button:active{
+    background-color: black;
+    
+}
+#signup-now{
+    color: white;
+    font-style: bold;
+    border: black;
+    text-shadow: 2px black;
+}  
+
+ 
+
+
+.modal{
+  
+   position: fixed;
+   z-index: 1;
+   left:0;
+   top:0;
+   height: 100vh;
+   width: 100vw;
+   overflow: auto;
+   background-color: rgba(0, 0, 0, 0.4);
+} 
+
+.modal-content{
+    display: grid;
+    background-color: #f4f4f4;
+    margin: 10% auto;
+    width: 90vw;
+    height: 70vh;
+    box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    justify-content: center;
+ }
+
+ .closebtn{
+
+    color: #ccc;
+    float: right;
+    font-weight: bolder;
+    font-size: 5vh;
+    margin-top: 1vw;
+    margin-right: 3vw;
+    cursor: pointer;
+    display: block;
+    z-index: 3;
+    right: 5vw;
+    top: 17vh;
+    position: absolute;
+}
+
+
+ .closebtn:hover,.closebtn:focus{
+    color:black;
+    text-decoration: none;
+
+}
+
+#terms{
+    display: none; 
+}
+#frame {
+    height: 70vh;
+    width: 90vw;
+}
+
+#promoVideo{
+    width:40vw;
+    height:30vh;
+}
+
+.input{
+    font-family: 'Rubik', sans-serif;
+    height: 3vh;
+    width: 7vw;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1vw;
+}
+    
+#promoModal{
+    display: none;
+}
+
+#videoPrev{
+    width: 40vw;
+    height: 30vh;
+}
+
+#videoPrev:hover{
+opacity: 80%;
+background-color: black;
+}
+
+#promoVideo{
+    display: grid;
+    height: 69vh;
+    width: 89vw;
+    align-self: center;
+    justify-self: center;
+}
