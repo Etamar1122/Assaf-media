@@ -22,6 +22,7 @@ const openVideoModal = function(){
     videoModal.css("display","block" );
 
 }
+
 // closeModal function (changes display to none)
 const closeModal = function(){
     termsModal.fadeOut("slow");
@@ -31,24 +32,27 @@ const closeModal = function(){
   }
 
   const closeVideoModal = function(){
-    videoModal.fadeOut("slow");
- 
+    $("#promoVideo").remove();
     videoModal.css("display","none" );
- 
+    $("#youtubeVid").append('<iframe id = "promoVideo"  src="https://www.youtube.com/embed/EIm4HvDgQCM"></iframe>');
+    
   }
 
  //clicking outside closes modal
 const clickOutsideTerms = function(event){
-    console.log(event)
+ 
     if(event.target.id == "terms"){
         termsModal.css("display","none");
     }
 }
 
 const clickOutsideVid = function(event){
-    console.log(event)
+   
     if(event.target.id == "promoModal"){
-        videoModal.css("display","none");
+        
+        $("#promoVideo").remove();
+        videoModal.css("display","none" );
+        $("#youtubeVid").append('<iframe id = "promoVideo"  src="https://www.youtube.com/embed/EIm4HvDgQCM"></iframe>');
     }
 }
 
@@ -67,3 +71,11 @@ videoModalPrev.on('click' , openVideoModal);
 termsCloseBtn.on('click' , closeVideoModal);
 
 $(window).on('click', clickOutsideVid);
+
+
+
+// Fadein function
+$(".header-text ").css('display','none');
+$("#signup-now").css('display','none');
+$(document).ready(setTimeout(function(){$(".header-text").fadeIn()},200));
+$(document).ready(setTimeout(function(){$("#signup-now").fadeIn()},200));

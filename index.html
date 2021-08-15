@@ -1,11 +1,16 @@
-<body>
-    <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
 <head><title>בואו להצליח!</title><link href="https://fonts.googleapis.com/css?family=Balthazar" rel="stylesheet"><link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   
+ 
 
 
  </head>
@@ -13,29 +18,34 @@
 
     
     <div id="container">
+      <div id = "test">
         <div id = "header">
-            <div class="overlay"></div>
-             <h1 class="title" id="title">הצטרפו אלינו כבר היום</h1>
-             <h1 class="title" id="title2">ותוכלו להפוך כל מכונה לחכמה יותר</h1>
-              <p class = header-text id="header-description">?אוהבים לתכנת</p> 
-              <p class = header-text id="header-description1">?תמיד רציתם לדעת איך לעבוד עם בינה מלאכותית</p> 
-              <p class = header-text id="header-description2">.הצטרפו אלינו לקורס המלווה על ידי מיטב המוחות במשק</p> 
-              <p class = header-text id="header-description3"> מתחילה כאן AI -  הדרך שלך ל </p> 
-              <div class= "button" id = "signup-now">הרשמה</div>  
-        </div>
+           <div id="headerTextContainer"> 
+              
+             
+              <p class = header-text > <span class = "title" id="title1">הגיע הזמן ללמוד מקצוע</span><br> אוהב לתכנת? הגיע הזמן ללמוד איך <br class = "header-text"> לעשות את זה נכון</br></p> 
           
+              <p class = header-text > Web הרשמו היום לקורס פיתוח <span id = "for-free"><br >!בחינם </br></span> </p> 
+        
+              <a href = "#contact" class= "button" id = "signup-now">הרשמו עכשיו</a> 
+              </div>
+          
+        </div>
+     </div>
         
 
         
-        <div id = "sector2">
+        <div id = "videoSec">
             
-            <div class = "button" id = "playButton"></div>
-            <img id = "videoPrev" src = "https://images.pexels.com/photos/8386435/pexels-photo-8386435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> </img>
+            <!-- <div class = "button" id = "playButton"></div> -->
+            <div id="promoText">?למה זה ממש <span class = "emphasis">כדאי</strong></div>
+            <img id = "videoPrev" src = "image.png"> </img>
             <div id = "promoModal" class = "modal">
-                <div class = "modal-content">
-                    <span class = "closebtn">&times;</span>
-                    <iframe id = "promoVideo" src="https://www.youtube.com/embed/s-kdRdzxdZQ"></iframe>
-                    <p></p>
+                 <span class = "closebtn" id = video>&times;</span>
+                 <div class = "modal-content" id = "youtubeVid">
+                    <div class = "title" id = "promoTitle">הבוגרים שלנו <span class = "emphasis">מספרים</span></div>
+                    <iframe id = "promoVideo"  src="https://www.youtube.com/embed/EIm4HvDgQCM"></iframe>
+                    
                 </div>
             </div>
            
@@ -49,32 +59,64 @@
         
         
         
-        <div id = "sector3">
-            <form>
+        <div id = "contact">
+            <form id= contact-form> 
+                 <p class = secondery-title>השאירו פרטים להרשמה</p>
+              <div class = "contact-rows">
                 <input type="text" class = "input" id="firstname" placeholder="שם פרטי"></input>
                 <input type="text" class = "input" id="lastname" placeholder="שם משפחה"></input>
-                <input type="text" class = "input" id="phone" placeholder="טלפון"></input>
+              </div>
+
+            
+              <div class = "contact-rows">
+                <span id="phone">
+                    <input type="text" class = "input" id="phonenumber" placeholder="טלפון"></input>
+                    <input type="text" class = "input" id="kidomet" placeholder="קידומת"></input>
+               </span>
                 <input type="text" class = "input" id="email" placeholder="דואר אלקטרוני"></input>
+              </div>
+
+              <div class = "contact-rows">
                 <input type="text" class = "input" id="adress" placeholder="כתובת מגורים"></input>
                 <input type="text" class = "input" id="city" placeholder="עיר"></input> 
-                 
+             </div>
 
             
                 <div id = "terms" class = "modal">
-                    <div class = "modal-content">
                         <span class = "closebtn">&times;</span>
+                        <div class = "modal-content">
                         <iframe id = "frame" src="https://mayafiles.tase.co.il/RPdf/428001-429000/P428236-00.pdf" height="100vh" width="100vw"></iframe>
-                        <p></p>
+                        
                     </div>
                 </div>
-                <input type="checkbox" class = "checkbox" id="termofuse" ><span>
-                    <a href = # id = "termsModal"> התקנון </a> 
-                     </span> אני מאשר את </input>
+                
+                <div class = "checkboxblock">
+                    <span>אני מאשר את</span> 
+                    <a href = none id = "termsModal">תקנון</a> 
+                   
+                    <span>,ו</span>
+                    <a href = none id = "rules"> תנאי השימוש </a>
+                    <span> של הקורס</span>
+                    <input type="checkbox" class = "checkbox" id="termofuse"> </input>
 
             
+                     
+                 </div>
+
+                 <div class = "checkboxblock">
+                    <span>ראיתי את ה</span> 
+                    <a href = none id = "termsModal">סילבוס</a> 
+                   
+                    <span> של הקורס</span>
+                   
+                    <input type="checkbox" class = "checkbox" id="termofuse"> </input>
+
+            
+                     
+                 </div>
+                    
                  
-            
-
+                 <div class = "button" id= "submit"> שליחה</div>
 
 
             </form>
@@ -83,16 +125,16 @@
 
       
         <div id = "footer">
-
+            <div id="facts"></div>
+            <div id = "map">as</div>
         </div>
        
         </div>
     </div>
 
  
-
-
     <script src="main.js"></script>
+
     
 </body>
 </html>

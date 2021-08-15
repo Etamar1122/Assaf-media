@@ -1,100 +1,90 @@
 #container{
-    display: grid;
+    display: flex;
     flex-direction: column;
-    grid-template-rows: repeat(4,1fr);
-    grid-template-areas: "h"
-                         "."
-                         "."
-                        ".";
+    font-family: 'Heebo', sans-serif;
+}
+html, body{
+    margin:0;
+    height: 100%;
+    font-family: 'Heebo', sans-serif;
+
 }
 
-#header{
-  
-    background-image: url("https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    background-size: cover;
-    grid-area: h;
-    justify-self: center;
-}
-
-.overlay {
-    display: grid;
-    background-color: black;
-    align-content: center;
-    justify-content: center;
-
-    opacity: 0.4;    
+/* #test{
+    width: 100%;
+    
+    text-align: center;
 } */
 
 
-
-
-
-
-
-
-
+#header{
+    font-family: 'Heebo', sans-serif;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.im.ge/2021/08/15/60HUq.png");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 
 
 .title{
-    font-family: 'Rubik', sans-serif;
-    position: absolute;
-    top: 5vh;
-    right: 5vw;
-    color: lightblue;
-     font-size: 5vh;
+    font-size: 6.93vh;
+    font-weight:900 ;   
+    color: rgb(255, 255, 255) ;
+}
+  
 
+#title1{
+    justify-self: flex-end;
+    text-align: end;
+   
 }
 
-#title2{
-   position: absolute;
-    top: 10vh;
-    right: 20vh;
+
+
+#headerTextContainer{
+    display: flex;
+    flex-direction: column;
+ 
+  
+    margin-right:22vw; 
+    
 }
 
 .header-text{
 
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Heebo', sans-serif;
  
-    color: lightblue;
-    font-weight: lighter;
-    font-size: 3vh;
-
-
+    color: white;
+    font-weight: 100;
+    font-size: 5.44vh;
+    text-align: end;
+    align-self: flex-end;
 }
 
-#header-description{
-  
-}
 
-#header-description1{
 
-}
 
-#header-description2{
-
-}
-
-#header-description3{
- 
-     grid-area: b;
-     font-weight: bolder;
-     align-self: center;
-     
-      
-}
+/*  */
 
 .button{
     font-family: 'Rubik', sans-serif;
     display: grid;
-   
-    height: 5vh;
-    width: 5vw;
-    background-color: rgb(125, 159, 165);
+     background-color: #00a99d;
     font-weight: bolder;
-    justify-content: center;
+    text-align: center;
     align-content: center;
-    border-radius: 3px;
-    
+    font-size: 3vh;
+    border-radius: 0.15vw;
+  
+
+   
+
     
 }
 
@@ -102,11 +92,23 @@
     background-color: black;
     
 }
+
+
+#for-free{
+   font-weight: 100;
+   font-size: 7.15vh;
+}
+
+
 #signup-now{
     color: white;
-    font-style: bold;
+    font-weight: black;
     border: black;
-    text-shadow: 2px black;
+  
+    align-self: flex-end;
+    cursor: pointer;
+    height: 6vh;
+    width: 12vw;
 }  
 
  
@@ -114,6 +116,7 @@
 
 .modal{
   
+    display: flex;
    position: fixed;
    z-index: 1;
    left:0;
@@ -127,16 +130,16 @@
 .modal-content{
     display: grid;
     background-color: #f4f4f4;
-    margin: 10% auto;
-    width: 90vw;
-    height: 70vh;
+    margin: 1.2% auto;
+    width: 65vw;
+    height: 95vh;
     box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
     justify-content: center;
  }
 
  .closebtn{
 
-    color: #ccc;
+    color: white;
     float: right;
     font-weight: bolder;
     font-size: 5vh;
@@ -145,14 +148,12 @@
     cursor: pointer;
     display: block;
     z-index: 3;
-    right: 5vw;
-    top: 17vh;
-    position: absolute;
+
 }
 
 
  .closebtn:hover,.closebtn:focus{
-    color:black;
+    color:#ccc;
     text-decoration: none;
 
 }
@@ -160,33 +161,25 @@
 #terms{
     display: none; 
 }
+
+
 #frame {
     height: 70vh;
     width: 90vw;
 }
 
-#promoVideo{
-    width:40vw;
-    height:30vh;
-}
 
-.input{
-    font-family: 'Rubik', sans-serif;
-    height: 3vh;
-    width: 7vw;
-    border-radius: 12px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.1vw;
-}
-    
+
+
+
 #promoModal{
     display: none;
 }
 
 #videoPrev{
-    width: 40vw;
-    height: 30vh;
+    width: 54.166vw;
+    height:  56.56vh;
+    cursor: pointer;
 }
 
 #videoPrev:hover{
@@ -197,7 +190,156 @@ background-color: black;
 #promoVideo{
     display: grid;
     height: 69vh;
-    width: 89vw;
+    width: 50vw;
     align-self: center;
     justify-self: center;
+}
+
+#promoTitle{
+    align-self: center;
+    color:black;
+    justify-self:center;
+}
+
+#videoSec{
+    background-color: #f9f9f9;
+    height:  90.71vh;
+    width: 100%;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+#promoText{
+    font-size: 3.9vh;
+    color: black;
+    font-weight:900;
+}
+
+.emphasis{
+    color: #00a99d;
+
+}
+
+
+
+.input{
+    font-family: 'Rubik', sans-serif;
+    height: 8.53vh;
+    width: 26.666vw;
+    border-radius: 12px;
+    text-align: end;
+    font-weight: bold;
+    font-size: 3.94vh;
+}
+    
+#contact{
+    display: flex;
+    flex-direction: column;
+    height: 97.43vh;
+    width: 100%;
+    background-color: #383838;
+ 
+
+}
+
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 60vw;
+    align-self: center;
+    justify-items: space-evenly;
+    justify-self: center;
+    /* margin-top: 8vh; */
+}   
+
+
+.contact-rows{
+    width: 60vw;
+    height: 10vh;
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: space-between;
+   
+}
+
+
+
+#firstname{
+    align-self: flex-start;
+    height: 8.53vh;
+    width: 26.666vw;
+}
+#lastname{
+    align-self: flex-start;
+  
+}
+
+#termofuse{
+    align-self: flex-end;
+
+
+}
+
+#termsModal{
+    align-self:flex-end;
+}
+
+.checkboxblock{
+    align-self:flex-end;
+    font-size:  3.94vh;
+    color: #f4f4f4;
+}
+
+#phone{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    
+}
+
+#kidomet{
+    width: 7.81vw;
+    height: 8.53;
+    margin-right: 0.7vw;
+  
+}
+
+#phonenumber{
+    width: 17.7vw;
+    height: 8.53vh;
+}
+
+#submit{
+    align-self: flex-start;
+    height: 7.47vh;
+    width: 9.47vw; 
+    font-weight: 100;
+    font-size: 3.9vh;
+    color:white
+}
+
+.secondery-title{
+    font-size: 6.08vh;
+    color: #fefefe;
+    font-weight: 900;
+}
+
+#footer{
+    width: 100%;
+    height: 50vh;
+}
+
+#facts{
+    height:20vw;
+}
+
+#map{
+    height: 30vw;
+    background-color: black;
 }
