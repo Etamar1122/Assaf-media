@@ -1,3 +1,8 @@
+
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
+
+
 #container{
     display: flex;
     flex-direction: column;
@@ -10,11 +15,9 @@ html, body{
 
 }
 
-/* #test{
-    width: 100%;
-    
-    text-align: center;
-} */
+p{
+    margin:0;
+}
 
 
 #header{
@@ -41,8 +44,7 @@ html, body{
 
 #title1{
     justify-self: flex-end;
-    text-align: end;
-   
+ 
 }
 
 
@@ -63,14 +65,14 @@ html, body{
     color: white;
     font-weight: 100;
     font-size: 5.44vh;
-    text-align: end;
+
     align-self: flex-end;
 }
 
 
 
 
-/*  */
+
 
 .button{
     font-family: 'Rubik', sans-serif;
@@ -224,14 +226,13 @@ background-color: black;
 }
 
 
-
 .input{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Open Sans Hebrew', serif;
     height: 8.53vh;
     width: 26.666vw;
     border-radius: 12px;
     text-align: end;
-    font-weight: bold;
+    font-weight: 100;
     font-size: 3.94vh;
 }
     
@@ -247,25 +248,37 @@ background-color: black;
 
 
 #contact-form{
+    
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     width: 60vw;
     align-self: center;
-    justify-items: space-evenly;
+    align-items: center;
     justify-self: center;
-    /* margin-top: 8vh; */
-}   
+ 
+}
+   
 
 
 .contact-rows{
+    font-family: 'Open Sans Hebrew', serif;
     width: 60vw;
-    height: 10vh;
+    height: 13vh;
     display: flex;
     flex-direction:row-reverse;
     justify-content: space-between;
+    font-weight: 100 !important; 
+    
    
+}
+
+
+#input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
 }
 
 
@@ -274,14 +287,18 @@ background-color: black;
     align-self: flex-start;
     height: 8.53vh;
     width: 26.666vw;
+  
+    font-weight: 100;
 }
 #lastname{
     align-self: flex-start;
+    font-weight: 100;
   
 }
 
 #termofuse{
     align-self: flex-end;
+    font-size:  3.94vh;
 
 
 }
@@ -300,19 +317,21 @@ background-color: black;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    
+    font-weight: 100;
 }
 
 #kidomet{
     width: 7.81vw;
     height: 8.53;
     margin-right: 0.7vw;
-  
+    text-align: center;
+    font-weight: 100;
 }
 
 #phonenumber{
     width: 17.7vw;
     height: 8.53vh;
+    font-weight: 100;
 }
 
 #submit{
@@ -321,25 +340,165 @@ background-color: black;
     width: 9.47vw; 
     font-weight: 100;
     font-size: 3.9vh;
-    color:white
+    color:white;
+    margin-top: 9vh;
 }
 
 .secondery-title{
     font-size: 6.08vh;
     color: #fefefe;
     font-weight: 900;
+
 }
+
+#register{
+    margin: 7vh;
+}
+
+.link{
+    color:#aaddf9;
+}
+
 
 #footer{
     width: 100%;
     height: 50vh;
 }
 
-#facts{
-    height:20vw;
-}
+
 
 #map{
-    height: 30vw;
-    background-color: black;
+    height: 93.5vh;
+    background-color: #383838;
+}
+
+
+p{
+    direction: rtl;
+}
+
+.numbers{
+    font-size: 8.53vh;
+    color: #383838;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    font-style: italic;
+    font-weight: 500;
+    height: 14vh;
+    
+    align-items: center;
+    
+}
+
+
+.facts-text{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  
+    font-size: 2.45vh;
+    font-weight: 900;
+    
+}
+
+
+#facts-title{
+    color :#383838;
+    align-self: center;
+    height: 13vh;
+    
+}
+
+
+#facts{
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:42.689vh;
+  
+}   
+
+.facts-icons{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    
+}
+
+
+#social{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 40vw;
+}
+
+.icons{
+     display: flex;
+    height: 4.88vh;
+    width: 2.13vw;
+    border: #5f5f5f solid;
+    border-radius:30%;
+    border-width: 0.1vw;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   
+}
+
+.icons:hover{
+    background-color: #00a99d;
+
+}
+.social-container{
+    height: 30.79vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content:space-evenly
+}
+
+
+
+#logo{
+   display: flex;
+    justify-content: center;
+}
+
+#gmap{
+  
+}
+
+#map-emblem{
+    width: 100%;
+    height: 56.93vh;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+}
+
+#copyright{
+    display: flex;
+    font-weight: 200;
+    color: white;
+    flex-direction: row-reverse;
+    font-size: 3vh;
+    justify-content: space-around;
+   
+}
+
+#copyright-img{
+    width:8vw;
+    height: 5vh;
+    justify-self: flex-end;
 }

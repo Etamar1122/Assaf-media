@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-   
- 
+    <script src="https://kit.fontawesome.com/56f631d05f.js" crossorigin="anonymous"></script>
+
 
 
  </head>
@@ -25,7 +25,7 @@
              
               <p class = header-text > <span class = "title" id="title1">הגיע הזמן ללמוד מקצוע</span><br> אוהב לתכנת? הגיע הזמן ללמוד איך <br class = "header-text"> לעשות את זה נכון</br></p> 
           
-              <p class = header-text > Web הרשמו היום לקורס פיתוח <span id = "for-free"><br >!בחינם </br></span> </p> 
+              <p class = header-text > Web הרשמו היום לקורס פיתוח <span id = "for-free"><br >בחינם! </br></span> </p> 
         
               <a href = "#contact" class= "button" id = "signup-now">הרשמו עכשיו</a> 
               </div>
@@ -39,7 +39,7 @@
             
             <!-- <div class = "button" id = "playButton"></div> -->
             <div id="promoText">?למה זה ממש <span class = "emphasis">כדאי</strong></div>
-            <img id = "videoPrev" src = "image.png"> </img>
+            <img id = "videoPrev" src = "https://i.ibb.co/D802dDs/image.jpg"> </img>
             <div id = "promoModal" class = "modal">
                  <span class = "closebtn" id = video>&times;</span>
                  <div class = "modal-content" id = "youtubeVid">
@@ -61,8 +61,10 @@
         
         <div id = "contact">
             <form id= contact-form> 
-                 <p class = secondery-title>השאירו פרטים להרשמה</p>
-              <div class = "contact-rows">
+                 <p class = secondery-title id = "register">הרשמו לקורס שלנו</p>
+            
+          
+                 <div class = "contact-rows">
                 <input type="text" class = "input" id="firstname" placeholder="שם פרטי"></input>
                 <input type="text" class = "input" id="lastname" placeholder="שם משפחה"></input>
               </div>
@@ -79,9 +81,9 @@
               <div class = "contact-rows">
                 <input type="text" class = "input" id="adress" placeholder="כתובת מגורים"></input>
                 <input type="text" class = "input" id="city" placeholder="עיר"></input> 
-             </div>
-
-            
+  
+               
+            </div>
                 <div id = "terms" class = "modal">
                         <span class = "closebtn">&times;</span>
                         <div class = "modal-content">
@@ -92,10 +94,10 @@
                 
                 <div class = "checkboxblock">
                     <span>אני מאשר את</span> 
-                    <a href = none id = "termsModal">תקנון</a> 
+                    <a href = none id = "termsModal" class = "link">תקנון</a> 
                    
-                    <span>,ו</span>
-                    <a href = none id = "rules"> תנאי השימוש </a>
+                    <span>ו</span>
+                    <a href = none id = "rules" class = "link" >תנאי השימוש</a>
                     <span> של הקורס</span>
                     <input type="checkbox" class = "checkbox" id="termofuse"> </input>
 
@@ -105,7 +107,7 @@
 
                  <div class = "checkboxblock">
                     <span>ראיתי את ה</span> 
-                    <a href = none id = "termsModal">סילבוס</a> 
+                    <a href = none class = "link" id = "termsModal">סילבוס</a> 
                    
                     <span> של הקורס</span>
                    
@@ -125,8 +127,55 @@
 
       
         <div id = "footer">
-            <div id="facts"></div>
-            <div id = "map">as</div>
+            <div id="facts">
+                <div id="facts-title" class = "secondery-title">
+                  <p> כמה דברים <span class="emphasis"> שכדאי</span> שתדעו</p>
+                </div>    
+                <div class = "numbers">
+                    <p>36</p>
+                    <p>4</p>
+                    <p>174</p>
+                </div>
+                <div class = "facts-icons"> 
+                    <i class="fas fa-thumbs-up fa-2x" ></i>
+                    <i class="fas fa-university fa-2x" ></i>
+                    <i class="fas fa-video fa-2x" ></i>
+
+                </div>
+                <div class = "facts-text">
+                    <p>תלמידים <span class="emphasis"> מרוצים</span></p>
+                    <p>מרצים בעלי <span class="emphasis"> נסיון</span></p>
+                    <p>שיעורים <span class="emphasis"> מקוונים</span></p>
+                </div>
+            </div>
+           
+        <div id = "map">
+            <div class = "social-container">
+                <div id="logo">
+                    <img src= "new-logo.png"></img>
+                </div>
+                <div id="social">
+                    <i class="fab fa-facebook-f icons" ></i>
+                    <i class="fab fa-twitter icons"></i>
+                    <i class="fab fa-pinterest-p icons"></i>
+                    <i class="fas fa-rss icons"></i>
+                    <i class="fab fa-vimeo-v icons"></i>
+                    <i class="fab fa-youtube icons"></i>
+                    <i class="fab fa-linkedin-in icons"></i>
+                    <i class="fab fa-dribbble icons"></i>
+                    <i class="fab fa-deviantart icons"></i>
+                    <i class="fab fa-stumbleupon icons"></i>
+            </div>
+        </div> 
+                <div id="gmap">
+                    <iframe id="map-emblem" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3379.8965834062283!2d34.77700848453114!3d32.099080581182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4bf618843ffb%3A0x7b9e1922625cf19!2z157Xp9eT15XXoNec15Mn16E!5e0!3m2!1siw!2sil!4v1629122163649!5m2!1siw!2sil"  allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div id= "copyright">
+                    <p>כל הזכויות שמורות לי</p>
+                    <img id = "copyright-img" src ="copyright-logo.png"></img>
+                </div>
+            </div>
+
         </div>
        
         </div>
