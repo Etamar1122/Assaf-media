@@ -236,7 +236,7 @@ background-color: black;
 .input{
     font-family: 'Open Sans Hebrew', serif;
     height: 8.53vh;
-    width: 26.666vw;
+    width: 30.666vw;
     border-radius: 12px;
     text-align: end;
     font-weight: 100;
@@ -269,7 +269,7 @@ background-color: black;
 
 .contact-rows{
     font-family: 'Open Sans Hebrew', serif;
-    width: 60vw;
+    width: 68vw;
     height: 13vh;
     display: flex;
     flex-direction:row-reverse;
@@ -291,7 +291,7 @@ background-color: black;
 #firstname{
     align-self: flex-start;
     height: 8.53vh;
-    width: 26.666vw;
+    width: 30.666vw;
   
     font-weight: 100;
 }
@@ -328,10 +328,11 @@ background-color: black;
     flex-direction: row-reverse;
     justify-content: space-around;
     font-weight: 100;
+    align-items: baseline;
 }
 
 #kidomet{
-    width: 7.81vw;
+    width: 10.4vw;
     height: 8.53vh;
     margin-right: 0.7vw;
     text-align: center;
@@ -339,7 +340,7 @@ background-color: black;
 }
 
 #phonenumber{
-    width: 17.7vw;
+    width: 19.7vw;
     height: 8.53vh;
     font-weight: 100;
 }
@@ -347,7 +348,7 @@ background-color: black;
 #submit{
     align-self: flex-start;
     height: 7.47vh;
-    width: 9.47vw; 
+    width: 14.47vh; 
     font-weight: 100;
     font-size: 3.9vh;
     color:white;
@@ -592,7 +593,7 @@ a{
 
     #submit {
      align-self: center;
-        width:19.9vw;
+        width:19.9vh;
      }
 
 
@@ -640,4 +641,30 @@ a{
         display: flex;
         height: 95.43vh;
     }
+
+
+    .contact-rows {
+        font-family: 'Open Sans Hebrew', serif;
+        width: 69vw;
+        height: 13vh;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        font-weight: 100 !important;
+    }
+
+    #kidomet{
+        width: 10.81vw;
+        height: 8.53vh;
+        margin-right: 0.7vw;
+        text-align: center;
+        font-weight: 100;
+    }
+    
+    #phonenumber{
+        width: 19.7vw;
+        height: 8.53vh;
+        font-weight: 100;
+    }
+
   }

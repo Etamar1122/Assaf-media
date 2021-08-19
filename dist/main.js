@@ -25,21 +25,34 @@ const CloseBtn = $(".closebtn");
 // OpenModal function (changes display to block)
 const openModal = function(event){
    
-        if(event.target.id == (modalLinkArr[0] || 'rules' || 'cylabus-popup')){
-        $(modalElementArr[0]).fadeIn()
-        $(modalElementArr[0]).css("display","block" );
-        }
-
-      else if(event.target.id == modalLinkArr[1] ){
-            $(modalElementArr[1]).fadeIn()
-            $(modalElementArr[1]).css("display","flex" );
-            $("#frame").css("display","none");
+        // Tryed to make it efficient, not working for some reason.
+        // if( event.target.id ==( modalLinkArr[0] || ('rules') || ('cylabus-popup'))){
+        // $(modalElementArr[0]).fadeIn()
+        // $(modalElementArr[0]).css("display","block" );
+        // } 
+        
+        if( event.target.id == modalLinkArr[0] ){
+            $(modalElementArr[0]).fadeIn()
+            $(modalElementArr[0]).css("display","block" );
+            } 
+            else if (event.target.id == 'cylabus-popup' ){
+                $(modalElementArr[0]).fadeIn()
+                $(modalElementArr[0]).css("display","block" );
+            } 
+            else if (event.target.id == 'rules' ){
+                $(modalElementArr[0]).fadeIn()
+                $(modalElementArr[0]).css("display","block" );
+            }
+             else if( event.target.id == modalLinkArr[1] ){
+                 $(modalElementArr[1]).fadeIn()
+                 $(modalElementArr[1]).css("display","flex" );
+                 $("#frame").css("display","none");
 
         }
     
 }
 
-////////////////////////////////////////////////
+/////////////////////////////////////////////////////
 
 // const openVideoModal = function(){
 //     videoModal.fadeIn()
@@ -100,13 +113,10 @@ const clickOutside = function(event){
  $(window).on('click', clickOutside);
  $('#rules').on('click' , openModal);
  $('#cylabus-popup').on('click' , openModal);
- videoModalPrev.on('click' , openModal);
-termsModalLink.on('click' , openModal);
+ videoModalPrev.on('click', '' , openModal);
+ termsModalLink.on('click' , openModal);
 
 
-// termsCloseBtn.on('click' , closeVideoModal);
-
-// $(window).on('click', clickOutsideVid);
 
 
 
@@ -125,32 +135,68 @@ $(document).ready(setTimeout(function(){$("#signup-now").fadeIn()},200));
 
 
 
+/////////////////////////////////////
+
+///////// Form functions ///////////
+
 ///////////////////////////////////
-/////// Form functions ///////////
-/////////////////////////////////
 
 
 // Validating form is filled currectly.
+const inputError = $("#inputError");
 
 function validate(e) {
     e.preventDefault();
     
-    const fieldName = ['#lastname','#firstname','#phonenumber','#kidomet','#email', '#address','#city']
+    const fieldName = ['#kidomet','#email', '#address','#city']
     const inputError = $("#inputError");
-  
+ 
+    
+const checkError = function(ID){
+    inputError.addClass("visible");  
+    $(ID).addClass("invalid");
+    inputError.attr("aria-hidden", false); 
+    inputError.attr("aria-invalid", true);
+    $('#OK').css("display", "none");
+
+    }
+
+
     let valid = true;
+
+
+
+    if ($('#firstname').val().length < 2 ||  $('#firstname').val().length > 16){
+        checkError('#firstname');
+        valid = false;
+    } else{
+        $('#firstname').removeClass("invalid")
+    }
+
+   
+    if ($('#lastname').val().length < 2 ||  $('#lastname').val().length > 16){
+        checkError('#lastname');
+        valid = false;
+    } else{
+        $('#lastname').removeClass("invalid")
+    }
+
+
+    if ($('#phonenumber').val().length != 7 ){
+        checkError('#phonenumber');
+        valid = false;
+    }  else{
+        $('#phonenumber').removeClass("invalid")
+    }
+    
+    
     fieldName.forEach(function(field){
         
         const inputFields = $(`${field}`);
         
         if (!inputFields.val()) {
-            inputError.addClass("visible");  
-            inputFields.addClass("invalid");
-            inputError.attr("aria-hidden", false); 
-            inputError.attr("aria-invalid", true);
-            $('#OK').css("display", "none");
-        
-        valid = false;
+           checkError(field);
+           valid = false;
       }
       else{
          inputFields.removeClass("invalid")
@@ -201,9 +247,7 @@ function validate(e) {
    
     await $.post('/', user, function (response) {  $('#OK').css("display", "block"); })
     
-    inputError.attr("aria-hidden", true);
-    inputError.attr("aria-invalid", false);
-   $("#contact-form").find('input').val('');
+   
 
 } 
 
@@ -225,7 +269,12 @@ const onSubmit = function(e) {
     else{
         e.preventDefault()
          newUser(e)
-     }
+         inputError.removeClass( "visible");     
+         inputError.attr("aria-hidden", true);
+         inputError.attr("aria-invalid", false);
+         $("#contact-form").find('input').val('');
+         inputError.removeClass("visible");  
+        }
 
 }
 

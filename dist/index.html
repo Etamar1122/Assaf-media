@@ -66,23 +66,30 @@
   
           
                  <div class = "contact-rows">
-                <input type="text" class = "input input-valid" id="firstname" maxlength="50" placeholder="שם פרטי" required="required"></input>
+                <input type="text" class = "input input-valid" id="firstname" maxlength="16" minlength="2" placeholder="שם פרטי" ></input>
 
-                <input type="text" class = "input input-valid"  id="lastname" maxlength="50" placeholder="שם משפחה" required></input>
+                <input type="text" class = "input input-valid"  id="lastname" maxlength="16" minlength="2" placeholder="שם משפחה" ></input>
               </div>
 
             
               <div class = "contact-rows">
                 <span id="phone">
-                    <input type="tel" class = "input input-valid" id="phonenumber" maxlength="7" placeholder="טלפון" required  ></input>
-                    <input type="text" class = "input input-valid" id="kidomet" placeholder="קידומת" required></input>
+                    <input type="tel" class = "input input-valid" id="phonenumber" maxlength="7" placeholder="טלפון"   ></input>
+                    <select  class = "input input-valid" id="kidomet" placeholder="קידומת" >
+                        <option value="050">050</option>
+                        <option value="052">052</option>
+                        <option value="053">053</option>
+                        <option value="054">054</option>
+                        <option value="055">055</option>
+                        <option value="058">058</option>
+                    </select>
                </span>
-                <input type="mail" class = "input input-valid" id="email"  maxlength="100" placeholder="דואר אלקטרוני" required></input>
+                <input type="mail" class = "input input-valid" id="email"  maxlength="100" placeholder="דואר אלקטרוני" ></input>
               </div>
 
               <div class = "contact-rows">
-                <input type="text" class = "input input-valid" id="address" maxlength="100" placeholder="כתובת מגורים" required></input>
-                <input type="text" class = "input input-valid" id="city"  maxlength="100" placeholder="עיר" required></input> 
+                <input type="text" class = "input input-valid" id="address" maxlength="100" placeholder="כתובת מגורים" ></input>
+                <input type="text" class = "input input-valid" id="city"  maxlength="100" placeholder="עיר" ></input> 
   
                
             </div>
@@ -96,27 +103,18 @@
                 
                 <div class = "checkboxblock" id = "term-box">
                     <span>אני מאשר את</span> 
-                    <span id = "termsModal" class = "link">תקנון</span> 
-                   
+                    <span id = "termsModal" class = "link agreement">תקנון</span> 
                     <span>ו</span>
-                    <span id = "rules" class = "link" >תנאי השימוש</span>
+                    <span id = "rules" class = "link agreement" >תנאי ההרשמה</span>
                     <span> של הקורס</span>
                     <input type="checkbox" class = "checkbox" id="termofuse"> </input>
-
-            
-                     
-                 </div>
+                  </div>
 
                  <div class = "checkboxblock" id = "cyla-box">
                     <span>ראיתי את ה</span> 
-                    <span class = "link" id = "cylabus-popup">סילבוס</span> 
-                   
-                    <span> של הקורס</span>
-                   
-                    <input type="checkbox" class = "checkbox" id="cylabus"> </input>
-
-            
-                     
+                    <span class = "link agreement" id = "cylabus-popup">סילבוס</span> 
+                    <span> של הקורס</span> 
+                    <input type="checkbox" class = "checkbox" id="cylabus"> </input>    
                  </div>
                     
                  
@@ -158,15 +156,15 @@
                 </div>
                 <div id="social">
                     <a href = "http://www.facebook.com"> <i class="fab fa-facebook-f icons" ></i></a>
-                    <a href = "http://www.twitter.com"> <i class="fab fa-twitter icons"></i>
-                    <a href = "http://www.pintrest.com"> <i class="fab fa-pinterest-p icons"></i>
-                    <a href = "http://www.rss.com"><i class="fas fa-rss icons"></i>
-                    <a href = "http://www.vimeo.com"><i class="fab fa-vimeo-v icons"></i>
-                    <a href = "http://www.youtube.com"><i class="fab fa-youtube icons"></i>
-                    <a href = "http://www.linkedin.com"><i class="fab fa-linkedin-in icons"></i>
-                    <a href = "http://www.dribbble.com"><i class="fab fa-dribbble icons"></i>
-                    <a href = "http://www.facebook.com"><i class="fab fa-deviantart icons"></i>
-                    <a href = "http://www.facebook.com"><i class="fab fa-stumbleupon icons"></i>
+                    <a href = "http://www.twitter.com"> <i class="fab fa-twitter icons"></i></a>
+                    <a href = "http://www.pintrest.com"> <i class="fab fa-pinterest-p icons"></i></a>
+                    <a href = "http://www.rss.com"><i class="fas fa-rss icons"></i></a>
+                    <a href = "http://www.vimeo.com"><i class="fab fa-vimeo-v icons"></i></a>
+                    <a href = "http://www.youtube.com"><i class="fab fa-youtube icons"></i></a>
+                    <a href = "http://www.linkedin.com"><i class="fab fa-linkedin-in icons"></i></a>
+                    <a href = "http://www.dribbble.com"><i class="fab fa-dribbble icons"></i></a>
+                    <a href = "http://www.facebook.com"><i class="fab fa-deviantart icons"></i></a>
+                    <a href = "http://www.facebook.com"><i class="fab fa-stumbleupon icons"></i></a>
             </div>
         </div> 
                 <div id="gmap">
