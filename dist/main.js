@@ -70,19 +70,21 @@ const openModal = function(event){
 
 
 const closeModal = function(e){
-    if(e.target.id == modalLinkArr[0]){
-        $(modalElementArr[0]).css("display","none" );
-        console.log("close button")
-        
-   } 
 
    if(e.target.id == 'video'){
          $("#promoVideo").remove();
          $(modalElementArr[1]).css("display","none" );
          $("#promoModal").append('<iframe id = "promoVideo"  src="https://www.youtube.com/embed/EIm4HvDgQCM"></iframe>');
          console.log("close button")
+    } else{
+       
+            $(modalElementArr[0]).css("display","none" );
+            console.log("close button")
+            
+       } 
+    
     }
- }
+ 
 
 
 
@@ -102,7 +104,7 @@ const clickOutside = function(event){
 
 
 
-// const video = $("#videoEmb");
+
  
 
 //////  Event listeners for modal window ///////// 
@@ -110,6 +112,7 @@ const clickOutside = function(event){
 
 
  CloseBtn.on('click' , closeModal);
+ 
  $(window).on('click', clickOutside);
  $('#rules').on('click' , openModal);
  $('#cylabus-popup').on('click' , openModal);
@@ -118,6 +121,10 @@ const clickOutside = function(event){
 
 
 
+
+/***************************************/
+//////// modal section end /////////////
+/**************************************/
 
 
 
@@ -145,14 +152,34 @@ $(document).ready(setTimeout(function(){$("#signup-now").fadeIn()},200));
 // Validating form is filled currectly.
 const inputError = $("#inputError");
 
+
 function validate(e) {
     e.preventDefault();
     
-    const fieldName = ['#kidomet','#email', '#address','#city']
+    const fieldName = ['#kidomet', '#address','#city']
     const inputError = $("#inputError");
  
-    
-const checkError = function(ID){
+
+    ///// Email validation function //////
+
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    function ValidateEmail(inputText)
+        {
+           
+            if(mailformat.test($("#email").val()) )   {
+               return true
+            }
+            else
+            {
+                return false
+            }
+        }
+
+
+
+ /////// Check function to prevent double coding ////////////
+
+const Error = function(ID){
     inputError.addClass("visible");  
     $(ID).addClass("invalid");
     inputError.attr("aria-hidden", false); 
@@ -162,20 +189,24 @@ const checkError = function(ID){
     }
 
 
+    //////////////  Actual validation ///////////
+
     let valid = true;
+   
+    const nameRegex =  /^[a-z\u05D0-\u05EA'-]+$/i ;
 
-
-
-    if ($('#firstname').val().length < 2 ||  $('#firstname').val().length > 16){
-        checkError('#firstname');
+    if (!(nameRegex.test($("#firstname").val())) || ($('#firstname').val().length < 2 ||  $('#firstname').val().length > 16)){
+     
+        Error('#firstname');
         valid = false;
+           
     } else{
         $('#firstname').removeClass("invalid")
     }
 
    
-    if ($('#lastname').val().length < 2 ||  $('#lastname').val().length > 16){
-        checkError('#lastname');
+    if ($('#lastname').val().length < 2 ||  $('#lastname').val().length > 16 || !(nameRegex.test($("#lastname").val()))) {
+        Error('#lastname');
         valid = false;
     } else{
         $('#lastname').removeClass("invalid")
@@ -183,19 +214,29 @@ const checkError = function(ID){
 
 
     if ($('#phonenumber').val().length != 7 ){
-        checkError('#phonenumber');
+        Error('#phonenumber');
         valid = false;
     }  else{
         $('#phonenumber').removeClass("invalid")
     }
     
-    
-    fieldName.forEach(function(field){
+ 
+   
+    if (ValidateEmail('#email')  != true){
+        Error('#email');
+        valid = false;
+    } else{
+        $("#email").removeClass("invalid");
+
+    }
+
+
+fieldName.forEach(function(field){
         
         const inputFields = $(`${field}`);
         
         if (!inputFields.val()) {
-           checkError(field);
+           Error(field);
            valid = false;
       }
       else{
@@ -205,15 +246,16 @@ const checkError = function(ID){
 })
 
 
-        let checkboxes = ['#termofuse','#cylabus']
-            checkboxes.forEach(function(checkbox){
-                
-               const checkboxField =  $(`${checkbox}`);
 
-                if  (checkboxField.is(':checked') != true){
-                    checkboxField.closest("div").addClass("invalid-checkbox");
-                    $('#OK').css("display", "none")
-                    valid = false;
+let checkboxes = ['#termofuse','#cylabus']
+    checkboxes.forEach(function(checkbox){
+                
+          const checkboxField =  $(`${checkbox}`);
+
+          if  (checkboxField.is(':checked') != true){
+                 checkboxField.closest("div").addClass("invalid-checkbox");
+                 $('#OK').css("display", "none")
+                 valid = false;
                 
                 }
                 else{
@@ -282,8 +324,8 @@ const onSubmit = function(e) {
 ///// Submit on click listener ///////
 
 
-$(document).on('click', function(e){ console.log (e.target.id) } )
+$(document).on('click', function(e){ console.log (e.target) } )
 
  submit.on('click',onSubmit)
 
-
+    
