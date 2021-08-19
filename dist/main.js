@@ -144,16 +144,11 @@ function validate(e) {
         const inputFields = $(`${field}`);
         
         if (!inputFields.val()) {
-         
-            inputError.addClass("visible");
-            
+            inputError.addClass("visible");  
             inputFields.addClass("invalid");
-            
-            inputError.attr("aria-hidden", false);
-            
+            inputError.attr("aria-hidden", false); 
             inputError.attr("aria-invalid", true);
-            
-            $('#OK').css("display", "none")
+            $('#OK').css("display", "none");
         
         valid = false;
       }
@@ -203,8 +198,12 @@ function validate(e) {
         user_address: $("#adress").val(),
         user_city: $("#city").val()
     }
-   await $.post('/', user, function (response) {  $('#OK').css("display", "block") ,  inputError.attr("aria-hidden", true); })
-   $("#contact-form").find('input').val('')
+   
+    await $.post('/', user, function (response) {  $('#OK').css("display", "block"); })
+    
+    inputError.attr("aria-hidden", true);
+    inputError.attr("aria-invalid", false);
+   $("#contact-form").find('input').val('');
 
 } 
 

@@ -113,7 +113,7 @@ p{
     align-self: flex-end;
     cursor: pointer;
     height: 6vh;
-    width: 12vw;
+    width: 22vh;
 }  
 
  /* modal window css */
@@ -169,8 +169,8 @@ p{
 
 #frame {
     display: block;
-    height: 70vh;
-    width: 90vw;
+    height: 97vh;
+    width: 65vw;
 }
 
 
@@ -567,13 +567,13 @@ a{
     .header-text {
     
         font-weight: 100;
-        font-size: 4.44vh;
+        font-size: 3.44vh;
     }
        
         
     #signup-now{ 
-        width: 23.47vw;
-          width: 25vw;  
+        width: 23.47vh;
+         
   
      }  
   
@@ -595,5 +595,49 @@ a{
         width:19.9vw;
      }
 
+
+     #facts-title {
+     
+        height: 18vh;
+        text-align: center;
+    }
+  
+    #register {
+        margin: 7vh;
+        text-align: center;
+    }
+
+
+    .input {
+
+        font-size: 2.94vh;
+    }
     
+    #for-free{
+        font-size: 6.15vh;
+    }
+
+    
+    #promoVideo {
+        height: 35vh;
+        width: 86vw;
+  
+    }
+    
+    
+    #videoPrev {
+        width: 80.166vw;
+        height: 36.56vh;
+    }
+ 
+    .icons {
+       
+        width: 5.13vw;
+        
+    }
+   
+    #contact-form {
+        display: flex;
+        height: 95.43vh;
+    }
   }
