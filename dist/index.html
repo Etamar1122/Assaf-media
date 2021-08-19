@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>בואו להצליח!</title><link href="https://fonts.googleapis.com/css?family=Balthazar" rel="stylesheet"><link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/56f631d05f.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+ </head>
+<body>
+
+    
+    <div id="container">
+      <div id = "test">
+        <div id = "header">
+           <div id="headerTextContainer"> 
+              
+             
+              <p class = header-text > <span class = "title" id="title1">הגיע הזמן ללמוד מקצוע</span><br> אוהב לתכנת? הגיע הזמן ללמוד איך <br class = "header-text"> לעשות את זה נכון</br></p> 
+          
+              <p class = header-text > הרשמו היום לקורס פיתוח Web <span id = "for-free"><br >בחינם! </br></span> </p> 
+        
+              <a href = "#contact" class= "button" id = "signup-now">הרשמו עכשיו</a> 
+              </div>
+          
+        </div>
+     </div>
+        
+
+        
+        <div id = "videoSec">
+            
+ 
+            <div id="promoText">?למה זה ממש <span class = "emphasis">כדאי</strong></div>
+            <img id = "videoPrev" src = "https://i.ibb.co/D802dDs/image.jpg"> </img>
+            <div id = "promoModal" class = "modal">
+                 <span class = "closebtn" id = video>&times;</span>
+                 <iframe id = "promoVideo"  src="https://www.youtube.com/embed/EIm4HvDgQCM"></iframe>
+             </div>
+           
+        </div>    
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        <div id = "contact">
+            <form id= contact-form> 
+                 <p class = secondery-title id = "register">הרשמו לקורס שלנו
+                    <span class = "secondery-title sucssesful" id = "OK"> ההרשמה בוצעה בהצלחה!</span>
+                    <span role="alert" id="inputError" aria-hidden="true">
+                        נא מלאו את כל השדות
+                      </span>
+                </p>
+  
+          
+                 <div class = "contact-rows">
+                <input type="text" class = "input input-valid" id="firstname" maxlength="50" placeholder="שם פרטי" required="required"></input>
+
+                <input type="text" class = "input input-valid"  id="lastname" maxlength="50" placeholder="שם משפחה" required></input>
+              </div>
+
+            
+              <div class = "contact-rows">
+                <span id="phone">
+                    <input type="tel" class = "input input-valid" id="phonenumber" maxlength="7" placeholder="טלפון" required  ></input>
+                    <input type="text" class = "input input-valid" id="kidomet" placeholder="קידומת" required></input>
+               </span>
+                <input type="mail" class = "input input-valid" id="email"  maxlength="100" placeholder="דואר אלקטרוני" required></input>
+              </div>
+
+              <div class = "contact-rows">
+                <input type="text" class = "input input-valid" id="address" maxlength="100" placeholder="כתובת מגורים" required></input>
+                <input type="text" class = "input input-valid" id="city"  maxlength="100" placeholder="עיר" required></input> 
+  
+               
+            </div>
+                <div id = "terms" class = "modal">
+                        <span class = "closebtn">&times;</span>
+                        <div class = "modal-content">
+                        <iframe id = "frame" src="https://mayafiles.tase.co.il/RPdf/428001-429000/P428236-00.pdf" height="100vh" width="100vw"></iframe>
+                        
+                    </div>
+                </div>
+                
+                <div class = "checkboxblock" id = "term-box">
+                    <span>אני מאשר את</span> 
+                    <span id = "termsModal" class = "link">תקנון</span> 
+                   
+                    <span>ו</span>
+                    <span id = "rules" class = "link" >תנאי השימוש</span>
+                    <span> של הקורס</span>
+                    <input type="checkbox" class = "checkbox" id="termofuse"> </input>
+
+            
+                     
+                 </div>
+
+                 <div class = "checkboxblock" id = "cyla-box">
+                    <span>ראיתי את ה</span> 
+                    <span class = "link" id = "cylabus-popup">סילבוס</span> 
+                   
+                    <span> של הקורס</span>
+                   
+                    <input type="checkbox" class = "checkbox" id="cylabus"> </input>
+
+            
+                     
+                 </div>
+                    
+                 
+                 <div class = "button" id= "submit"  > שליחה</div>
+
+
+            </form>
+           
+        </div>
+
+      
+        <div id = "footer">
+            <div id="facts">
+                <div id="facts-title" class = "secondery-title">
+                  <p> כמה דברים <span class="emphasis"> שכדאי</span> שתדעו</p>
+                </div>    
+                <div class = "numbers">
+                    <p>36</p>
+                    <p>4</p>
+                    <p>174</p>
+                </div>
+                <div class = "facts-icons"> 
+                    <i class="fas fa-thumbs-up fa-2x" ></i>
+                    <i class="fas fa-university fa-2x" ></i>
+                    <i class="fas fa-video fa-2x" ></i>
+
+                </div>
+                <div class = "facts-text">
+                    <p>תלמידים <span class="emphasis"> מרוצים</span></p>
+                    <p>מרצים בעלי <span class="emphasis"> נסיון</span></p>
+                    <p>שיעורים <span class="emphasis"> מקוונים</span></p>
+                </div>
+            </div>
+           
+        <div id = "map">
+            <div class = "social-container">
+                <div id="logo">
+                    <img src= "new-logo.png"></img>
+                </div>
+                <div id="social">
+                    <a href = "http://www.facebook.com"> <i class="fab fa-facebook-f icons" ></i></a>
+                    <a href = "http://www.twitter.com"> <i class="fab fa-twitter icons"></i>
+                    <a href = "http://www.pintrest.com"> <i class="fab fa-pinterest-p icons"></i>
+                    <a href = "http://www.rss.com"><i class="fas fa-rss icons"></i>
+                    <a href = "http://www.vimeo.com"><i class="fab fa-vimeo-v icons"></i>
+                    <a href = "http://www.youtube.com"><i class="fab fa-youtube icons"></i>
+                    <a href = "http://www.linkedin.com"><i class="fab fa-linkedin-in icons"></i>
+                    <a href = "http://www.dribbble.com"><i class="fab fa-dribbble icons"></i>
+                    <a href = "http://www.facebook.com"><i class="fab fa-deviantart icons"></i>
+                    <a href = "http://www.facebook.com"><i class="fab fa-stumbleupon icons"></i>
+            </div>
+        </div> 
+                <div id="gmap">
+                    <iframe id="map-emblem" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3379.8965834062283!2d34.77700848453114!3d32.099080581182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4bf618843ffb%3A0x7b9e1922625cf19!2z157Xp9eT15XXoNec15Mn16E!5e0!3m2!1siw!2sil!4v1629122163649!5m2!1siw!2sil"  allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div id= "copyright">
+                    <p>כל הזכויות שמורות לי</p>
+                    <img id = "copyright-img" src ="copyright-logo.png"></img>
+                </div>
+            </div>
+
+        </div>
+       
+        </div>
+    </div>
+
+ 
+    <script src="main.js"></script>
+    <script src="/jQuery/tmp/jquery.js"></script>
+   
+</body>
+</html>
