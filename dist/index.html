@@ -11,11 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/56f631d05f.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+    <script src="/pdfobject/pdfobject.js"></script>
+    
  </head>
 <body>
 
+    
     
     <div id="container">
       <div id = "test">
@@ -95,10 +96,13 @@
             </div>
                 <div id = "terms" class = "modal">
                         <span class = "closebtn" id= "close">&times;</span>
-                        <div class = "modal-content">
-                        <iframe id = "frame" src="https://mayafiles.tase.co.il/RPdf/428001-429000/P428236-00.pdf" height="100vh" width="100vw"></iframe>
-                        
-                    </div>
+                        <div class = "modal-content" id = "terms-container">
+                            <object id = "frame" height="60vh" width="100%"></object>
+                            <div id = "PDF">
+
+                            </div>
+                        </div>
+               
                 </div>
                 
                 <div class = "checkboxblock" id = "term-box">
@@ -163,8 +167,8 @@
                     <a href = "http://www.youtube.com"><i class="fab fa-youtube icons"></i></a>
                     <a href = "http://www.linkedin.com"><i class="fab fa-linkedin-in icons"></i></a>
                     <a href = "http://www.dribbble.com"><i class="fab fa-dribbble icons"></i></a>
-                    <a href = "http://www.facebook.com"><i class="fab fa-deviantart icons"></i></a>
-                    <a href = "http://www.facebook.com"><i class="fab fa-stumbleupon icons"></i></a>
+                    <a href = "https://www.deviantart.com/"><i class="fab fa-deviantart icons"></i></a>
+                    <a href = "https://www.stumbleupon.com/"><i class="fab fa-stumbleupon icons"></i></a>
             </div>
         </div> 
                 <div id="gmap">
@@ -181,9 +185,8 @@
         </div>
     </div>
 
- 
     <script src="main.js"></script>
     <script src="/jQuery/tmp/jquery.js"></script>
-   
+
 </body>
 </html>

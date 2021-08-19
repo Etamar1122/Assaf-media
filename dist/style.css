@@ -165,7 +165,10 @@ p{
 }
 
 
-
+.pdfobject {
+    height: 95vh !important;
+    width: 65vw !important;
+}
 
 #frame {
     display: block;
@@ -659,6 +662,7 @@ a{
         margin-right: 0.7vw;
         text-align: center;
         font-weight: 100;
+        font-size: 2.2vh ;
     }
     
     #phonenumber{
@@ -666,5 +670,12 @@ a{
         height: 8.53vh;
         font-weight: 100;
     }
+
+    
+.pdfobject {
+    height: 95vh !important;
+    width: 65vw !important;
+}
+
 
   }

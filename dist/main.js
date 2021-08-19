@@ -20,7 +20,7 @@ const CloseBtn = $(".closebtn");
 //////////////////////////////////////////////
 ///////////// Modal functions ////////////////
 
-
+PDFObject.embed("/P428236-00.pdf", "#terms-container");
 
 // OpenModal function (changes display to block)
 const openModal = function(event){
@@ -32,16 +32,21 @@ const openModal = function(event){
         // } 
         
         if( event.target.id == modalLinkArr[0] ){
+            $("#PDF").append(PDFObject.embed("/P428236-00.pdf", "#terms-container")) 
             $(modalElementArr[0]).fadeIn()
-            $(modalElementArr[0]).css("display","block" );
-            } 
+            $(modalElementArr[0]).css("display","block");
+           
+           
+            }
             else if (event.target.id == 'cylabus-popup' ){
                 $(modalElementArr[0]).fadeIn()
                 $(modalElementArr[0]).css("display","block" );
+                $("#terms-container").append(PDFObject.embed("/P428236-00.pdf", "#terms-container"))
             } 
             else if (event.target.id == 'rules' ){
                 $(modalElementArr[0]).fadeIn()
                 $(modalElementArr[0]).css("display","block" );
+                $("#terms-container").append(PDFObject.embed("/P428236-00.pdf", "#terms-container"))
             }
              else if( event.target.id == modalLinkArr[1] ){
                  $(modalElementArr[1]).fadeIn()
@@ -52,17 +57,6 @@ const openModal = function(event){
     
 }
 
-/////////////////////////////////////////////////////
-
-// const openVideoModal = function(){
-//     videoModal.fadeIn()
-//     videoModal.css("display","block" );
-
-// }
-
-// closeModal function (changes display to none)
-
-/////////////////////////////////////////////////////
 
 
 
@@ -80,6 +74,7 @@ const closeModal = function(e){
        
             $(modalElementArr[0]).css("display","none" );
             console.log("close button")
+            $("#PDF").empty();
             
        } 
     
@@ -93,6 +88,7 @@ const clickOutside = function(event){
  
     if(event.target.id == "terms"){
         $(modalElementArr[0]).css("display","none");
+        $("#PDF").empty();
     }
     
     if(event.target.id == "promoModal"){
@@ -193,10 +189,9 @@ const Error = function(ID){
 
     let valid = true;
    
-    const nameRegex =  /^[a-z\u05D0-\u05EA'-]+$/i ;
+    const nameRegex =  /^[a-z\u05D0-\u05EA' -]+$/i ;
 
     if (!(nameRegex.test($("#firstname").val())) || ($('#firstname').val().length < 2 ||  $('#firstname').val().length > 16)){
-     
         Error('#firstname');
         valid = false;
            
@@ -221,7 +216,6 @@ const Error = function(ID){
     }
     
  
-   
     if (ValidateEmail('#email')  != true){
         Error('#email');
         valid = false;
@@ -241,7 +235,7 @@ fieldName.forEach(function(field){
       }
       else{
          inputFields.removeClass("invalid")
-          
+      
     }
 })
 
@@ -322,9 +316,6 @@ const onSubmit = function(e) {
 
 
 ///// Submit on click listener ///////
-
-
-$(document).on('click', function(e){ console.log (e.target) } )
 
  submit.on('click',onSubmit)
 
